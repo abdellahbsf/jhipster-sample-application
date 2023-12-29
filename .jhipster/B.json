@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20231229152720"
+  },
+  "applications": ["jhipsterSampleApplication"],
+  "entityTableName": "b",
+  "fields": [
+    {
+      "fieldName": "package",
+      "fieldType": "String"
+    }
+  ],
+  "name": "B",
+  "relationships": [
+    {
+      "otherEntityName": "a",
+      "otherEntityRelationshipName": "b",
+      "relationshipName": "a",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}
