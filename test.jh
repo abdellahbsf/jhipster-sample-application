@@ -11,14 +11,39 @@ application {
   entities *
 }
 
-entity A {
-Files String
+entity RefTable {
+   Files String
+   DupClass String
+   Version String
+   Enums String
+   FQCN String
+   Jparser String
 }
 
-entity B {
+entity Files {
+filePath String 
 package String
+import String
+className String
+}
+
+entity FQCN {
+fqcn String 
+className String
+}
+
+entity Jparser {
+filepath String 
+fqcn String
+className String
 }
 
 relationship OneToMany {
-  A to B
+  RefTable{Files} to Files
+}
+relationship OneToMany {
+  RefTable{FQCN} to FQCN
+}
+relationship OneToMany {
+  RefTable{Jparser} to Jparser
 }
